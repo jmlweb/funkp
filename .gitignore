@@ -1,7 +1,6 @@
 /node_modules
 /yarn-error.log
 /config/doctemplates/jsdoc-template
-/docs
 /cjs
 /es
 /iife
