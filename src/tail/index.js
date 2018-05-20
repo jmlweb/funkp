@@ -3,7 +3,8 @@
  * 
  * const array = ['a', 'b', 'c'];
  * tail(array); // ['b', 'c'];
- * @param {*} param0 
+ * @param {array}
+ * @returns {array}
  */
 const tail = ([,...x]) => x;
 

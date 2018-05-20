@@ -13,7 +13,8 @@
     "clean": "rimraf ./cjs ./es ./iife",
     "prebuild": "yarn clean",
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "doc": "jsdoc src/**/*.js",
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.47",
@@ -23,6 +24,7 @@
     "assert": "^1.4.1",
     "cross-env": "^5.1.5",
     "eslint": "^4.19.1",
+    "jsdoc": "^3.5.5",
     "mocha": "^5.2.0",
     "prettier": "^1.12.1",
     "rimraf": "^2.6.2",
