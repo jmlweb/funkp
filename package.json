@@ -1,0 +1,36 @@
+{
+  "name": "funkp",
+  "version": "0.0.1",
+  "description": "Funkp - Utils for JavaScript FP coding style",
+  "main": "cjs/index.js",
+  "module": "es/index.js",
+  "browser": "iife/index.js",
+  "repository": "git@github.com:jmlweb/funkp.git",
+  "author": "José Manuel Lucas <josemanuel@jmlweb.es>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha --require @babel/register src/**/*.spec.js",
+    "clean": "rimraf ./cjs ./es ./iife",
+    "prebuild": "yarn clean",
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.47",
+    "@babel/core": "^7.0.0-beta.47",
+    "@babel/preset-env": "^7.0.0-beta.47",
+    "@babel/register": "^7.0.0-beta.47",
+    "assert": "^1.4.1",
+    "cross-env": "^5.1.5",
+    "eslint": "^4.19.1",
+    "mocha": "^5.2.0",
+    "prettier": "^1.12.1",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.59.1",
+    "rollup-plugin-babel": "^4.0.0-beta.4",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^4.0.0",
+    "uglify-es": "^3.3.9"
+  }
+}
