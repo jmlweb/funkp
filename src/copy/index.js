@@ -1,12 +1,15 @@
-import isDef from '../isDef';
+import isArray from '../isArray';
 
 /**
  * Return an exact copy of the array
  * 
+ * @func
+ * @param {Array} x - source array
+ * @return {Array}
+ * 
+ * @example
  * copy(['a', 'b', 'c']) // ['a', 'b', 'c']
- * @param {array} x
- * @returns {array}
  */
-const copy = x => isDef(x) ? [...x] : [];
+const copy = x => isArray(x) ? [...x] : [];
 
 export default copy;

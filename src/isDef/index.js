@@ -1,7 +1,14 @@
 /**
  * Check if argument supplied is defined
- * @param {any} x => value to be checked
- * @returns {boolean}
+ * 
+ * @func
+ * @param {*} x => value to be checked
+ * @return {Boolean}
+ * 
+ * @example
+ * const a = { foo: 'bar' }
+ * isDef(a.foo); //true
+ * isDef(a.bar); //false
  */
 const isDef = x => typeof x !== 'undefined';
 

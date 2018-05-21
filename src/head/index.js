@@ -1,10 +1,13 @@
 /**
  * Return the first item in an array
  *
+ * @func
+ * @param {Array} - Array to get the first item of
+ * @return {*}
+ * 
+ * @example
  * const array = ['a', 'b', 'c'];
  * head(array) // 'a'
- * @param {x} - first item
- * @returns {any}
  */
 const head = ([x]) => x;
 
