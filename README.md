@@ -6,6 +6,8 @@ Simple utils for FP in JavaScript
 
 ## Getting started
 
+[Documentation](https://jmlweb.github.io/funkp/)
+
 ### With modules
 
 ```sh
