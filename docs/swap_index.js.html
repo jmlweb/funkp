@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      isUndef/index.js - Documentation
+      swap/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        isUndef/index.js
+        swap/index.js
       </h1>
     
 
@@ -87,23 +87,32 @@
 
 <section>
   <article>
-    <pre class="prettyprint source linenums"><code>import isDef from '../isDef';
+    <pre class="prettyprint source linenums"><code>import map from '../map';
 
 /**
- * Check if argument supplied is not defined
+ * Swap between two positions in array
  *
  * @func
- * @param {*} x - Value to be checked
- * @returns {Boolean}
+ * @param {Array} x - array to be swapped
+ * @param {Number} i - first position
+ * @param {Number} j - second position
+ * @return {Array}
  *
  * @example
- * const a = { foo: 'bar' }
- * isDef(a.foo); //false
- * isDef(a.bar); //true
+ * swap(['a', 'b', 'c'], 2, 0); //['c', 'b', 'a']
  */
-const isUndef = x => !isDef(x);
+const swap = (x, i, j) =>
+  map(x, (v, k) => {
+    if (k === i) {
+      return x[j];
+    }
+    if (k === j) {
+      return x[i];
+    }
+    return v;
+  });
 
-export default isUndef;
+export default swap;
 </code></pre>
   </article>
 </section>

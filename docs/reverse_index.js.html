@@ -72,7 +72,7 @@
       funkp
     </h3>
 
-    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#copy">copy</a></li><li><a href="global.html#head">head</a></li><li><a href="global.html#isDef">isDef</a></li><li><a href="global.html#isUndef">isUndef</a></li><li><a href="global.html#length">length</a></li><li><a href="global.html#reverse">reverse</a></li><li><a href="global.html#tail">tail</a></li></ul>
+    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#copy">copy</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#flatten">flatten</a></li><li><a href="global.html#head">head</a></li><li><a href="global.html#isDef">isDef</a></li><li><a href="global.html#isUndef">isUndef</a></li><li><a href="global.html#last">last</a></li><li><a href="global.html#length">length</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#reverse">reverse</a></li><li><a href="global.html#swap">swap</a></li><li><a href="global.html#tail">tail</a></li></ul>
   </nav>
 
   <div id="main">
@@ -87,21 +87,23 @@
 
 <section>
   <article>
-    <pre class="prettyprint source linenums"><code>import isDef from '../isDef';
+    <pre class="prettyprint source linenums"><code>import copy from '../copy';
+import isArray from '../isArray';
 
 /**
  * Return a reversed copy of the array
- * 
+ *
  * @func
  * @param {Array}
  * @return {Array}
- * 
+ *
  * @example
  * reverse([1,2,3]); //[3,2,1]
  */
-const reverse = ([x, ...xs]) => isDef(x) ? [...reverse(xs), x] : [];
+const reverse = x => (isArray(x) ? copy(x).reverse() : []);
 
-export default reverse;</code></pre>
+export default reverse;
+</code></pre>
   </article>
 </section>
 

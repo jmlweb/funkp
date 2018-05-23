@@ -72,7 +72,7 @@
       funkp
     </h3>
 
-    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#copy">copy</a></li><li><a href="global.html#head">head</a></li><li><a href="global.html#isDef">isDef</a></li><li><a href="global.html#isUndef">isUndef</a></li><li><a href="global.html#length">length</a></li><li><a href="global.html#reverse">reverse</a></li><li><a href="global.html#tail">tail</a></li></ul>
+    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#copy">copy</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#flatten">flatten</a></li><li><a href="global.html#head">head</a></li><li><a href="global.html#isDef">isDef</a></li><li><a href="global.html#isUndef">isUndef</a></li><li><a href="global.html#last">last</a></li><li><a href="global.html#length">length</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#reverse">reverse</a></li><li><a href="global.html#swap">swap</a></li><li><a href="global.html#tail">tail</a></li></ul>
   </nav>
 
   <div id="main">
@@ -89,11 +89,11 @@
   <article>
     <pre class="prettyprint source linenums"><code>/**
  * Check if argument supplied is defined
- * 
+ *
  * @func
  * @param {*} x => value to be checked
  * @return {Boolean}
- * 
+ *
  * @example
  * const a = { foo: 'bar' }
  * isDef(a.foo); //true
@@ -101,7 +101,8 @@
  */
 const isDef = x => typeof x !== 'undefined';
 
-export default isDef;</code></pre>
+export default isDef;
+</code></pre>
   </article>
 </section>
 

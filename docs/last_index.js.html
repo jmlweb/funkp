@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      isUndef/index.js - Documentation
+      last/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        isUndef/index.js
+        last/index.js
       </h1>
     
 
@@ -87,23 +87,23 @@
 
 <section>
   <article>
-    <pre class="prettyprint source linenums"><code>import isDef from '../isDef';
+    <pre class="prettyprint source linenums"><code>import isArray from '../isArray';
+import first from '../first';
+import reverse from '../reverse';
 
 /**
- * Check if argument supplied is not defined
+ * Extract the last n items from array supplied
  *
- * @func
- * @param {*} x - Value to be checked
- * @returns {Boolean}
+ * @param {Array} x - The array to extract the items of
+ * @param {Number} n - Number of items
+ * @return {Array}
  *
  * @example
- * const a = { foo: 'bar' }
- * isDef(a.foo); //false
- * isDef(a.bar); //true
+ * last(['a', 'b', 'c'], 2); // ['b', 'c']
  */
-const isUndef = x => !isDef(x);
+const last = (x, n = 1) => (isArray(x) ? reverse(first(reverse(x), n)) : []);
 
-export default isUndef;
+export default last;
 </code></pre>
   </article>
 </section>

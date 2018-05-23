@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      isUndef/index.js - Documentation
+      first/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        isUndef/index.js
+        first/index.js
       </h1>
     
 
@@ -87,23 +87,29 @@
 
 <section>
   <article>
-    <pre class="prettyprint source linenums"><code>import isDef from '../isDef';
+    <pre class="prettyprint source linenums"><code>import isArray from '../isArray';
 
 /**
- * Check if argument supplied is not defined
+ * Extract the first n items from array supplied
  *
  * @func
- * @param {*} x - Value to be checked
- * @returns {Boolean}
+ * @param {Array} - Array to extract the items of
+ * @param {Number} n - Number of items to extract
+ * @return {Array}
  *
  * @example
- * const a = { foo: 'bar' }
- * isDef(a.foo); //false
- * isDef(a.bar); //true
+ * first(['a', 'b', 'c'], 2); // 2
  */
-const isUndef = x => !isDef(x);
+// const first = ([x, ...xs], n = 1) => (isArray(xs) &amp;&amp; n ? [x, ...first(xs, n - 1)] : []);
+const first = (arr, n = 1) => {
+  if (!isArray(arr)) {
+    return [];
+  }
+  const [x, ...xs] = arr;
+  return isArray(xs) &amp;&amp; n ? [x, ...first(xs, n - 1)] : [];
+};
 
-export default isUndef;
+export default first;
 </code></pre>
   </article>
 </section>

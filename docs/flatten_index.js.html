@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      isUndef/index.js - Documentation
+      flatten/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        isUndef/index.js
+        flatten/index.js
       </h1>
     
 
@@ -88,22 +88,22 @@
 <section>
   <article>
     <pre class="prettyprint source linenums"><code>import isDef from '../isDef';
+import isArray from '../isArray';
 
 /**
- * Check if argument supplied is not defined
+ * Flatten nested arrays into an unidimensional ones
  *
  * @func
- * @param {*} x - Value to be checked
- * @returns {Boolean}
+ * @param {Array} - Array to flatten
+ * @return {Array}
  *
  * @example
- * const a = { foo: 'bar' }
- * isDef(a.foo); //false
- * isDef(a.bar); //true
+ * flatten([['a'], ['b'], ['c'], ['d']]); // ['a', 'b', 'c', 'd']
  */
-const isUndef = x => !isDef(x);
+const flatten = ([x, ...xs]) =>
+  isDef(x) ? (isArray(x) ? [...flatten(x), ...flatten(xs)] : [x, ...flatten(xs)]) : [];
 
-export default isUndef;
+export default flatten;
 </code></pre>
   </article>
 </section>

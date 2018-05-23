@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      isUndef/index.js - Documentation
+      map/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        isUndef/index.js
+        map/index.js
       </h1>
     
 
@@ -87,23 +87,22 @@
 
 <section>
   <article>
-    <pre class="prettyprint source linenums"><code>import isDef from '../isDef';
+    <pre class="prettyprint source linenums"><code>import isArray from '../isArray';
 
 /**
- * Check if argument supplied is not defined
+ * Returns a new array applying the function to each item in the array
  *
  * @func
- * @param {*} x - Value to be checked
- * @returns {Boolean}
+ * @param {Array} x
+ * @param {Function} fn
+ * @return {Array}
  *
  * @example
- * const a = { foo: 'bar' }
- * isDef(a.foo); //false
- * isDef(a.bar); //true
+ * map([1,2,3], v => v * 2); //[2,4,6]
  */
-const isUndef = x => !isDef(x);
+const map = (x, fn) => (isArray(x) ? x.map(fn) : []);
 
-export default isUndef;
+export default map;
 </code></pre>
   </article>
 </section>

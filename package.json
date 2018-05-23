@@ -19,6 +19,11 @@
     "predoc:serve": "yarn doc",
     "doc:serve": "serve -n -o docs"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test && yarn doc"
+    }
+  },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.47",
     "@babel/core": "^7.0.0-beta.47",
@@ -30,6 +35,7 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.12.0",
+    "husky": "^1.0.0-rc.6",
     "jsdoc": "^3.5.5",
     "mocha": "^5.2.0",
     "nyc": "^11.8.0",
