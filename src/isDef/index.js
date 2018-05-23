@@ -1,10 +1,10 @@
 /**
  * Check if argument supplied is defined
- * 
+ *
  * @func
  * @param {*} x => value to be checked
  * @return {Boolean}
- * 
+ *
  * @example
  * const a = { foo: 'bar' }
  * isDef(a.foo); //true

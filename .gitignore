@@ -4,3 +4,5 @@
 /cjs
 /es
 /iife
+/coverage
+/.nyc_output
