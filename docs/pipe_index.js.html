@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      tail/index.js - Documentation
+      pipe/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        tail/index.js
+        pipe/index.js
       </h1>
     
 
@@ -87,20 +87,21 @@
 
 <section>
   <article>
-    <pre class="prettyprint source linenums"><code>/**
- * Return all but the first item in an array
- *
- * @func
- * @param {Array}
- * @returns {Array}
- *
- * @example
- * const array = ['a', 'b', 'c'];
- * tail(array); // ['b', 'c'];
- */
-const tail = ([, ...x]) => x;
+    <pre class="prettyprint source linenums"><code>import reduce from '../reduce';
 
-export default tail;
+/**
+ * Connects functions passed by parameter where data flows from left to right
+ * @param {Array} fn
+ * @return {*}
+ * @example
+ * const addTwo = x => x + 2;
+ * const multiplyByFour = x => 4 * x;
+ * const getFinalPrice = pipe(addTwo, multiplyByFour)
+ * getFinalPrice(10); // multiplyByFour(addTwo(10)) // 48
+ */
+const pipe = (...fn) => x => reduce(fn, (acc, curr) => curr(acc), x);
+
+export default pipe;
 </code></pre>
   </article>
 </section>
