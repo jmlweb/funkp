@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      tail/index.js - Documentation
+      min/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        tail/index.js
+        min/index.js
       </h1>
     
 
@@ -87,20 +87,20 @@
 
 <section>
   <article>
-    <pre class="prettyprint source linenums"><code>/**
- * Return all but the first item in an array
+    <pre class="prettyprint source linenums"><code>import reduce from '../reduce';
+
+/**
+ * Return the min value in array
  *
  * @func
- * @param {Array}
- * @returns {Array}
- *
+ * @param {Array} array
+ * @return {*}
  * @example
- * const array = ['a', 'b', 'c'];
- * tail(array); // ['b', 'c'];
+ * min([1,2,3]); // 1
  */
-const tail = ([, ...x]) => x;
+const min = array => reduce(array, (acc, curr) => (curr &lt; acc ? curr : acc), Infinity);
 
-export default tail;
+export default min;
 </code></pre>
   </article>
 </section>
