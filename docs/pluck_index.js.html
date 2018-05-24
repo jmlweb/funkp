@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      map/index.js - Documentation
+      pluck/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        map/index.js
+        pluck/index.js
       </h1>
     
 
@@ -88,19 +88,18 @@
 <section>
   <article>
     <pre class="prettyprint source linenums"><code>/**
- * Returns a new array applying the function to each item in the array
+ * Extract a property from an object
  *
  * @func
- * @param {Array} x
- * @param {Function} fn
- * @return {Array}
- *
+ * @param {*} key
+ * @param {Object} obj
+ * @return {*}
  * @example
- * map([1,2,3], v => v * 2); //[2,4,6]
+ * pluck('a', { a: 10 }); // 10
  */
-const map = (x, fn) => x.map(fn);
+const pluck = (key, obj) => obj[key];
 
-export default map;
+export default pluck;
 </code></pre>
   </article>
 </section>

@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      map/index.js - Documentation
+      reverseArgs/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        map/index.js
+        reverseArgs/index.js
       </h1>
     
 
@@ -87,20 +87,22 @@
 
 <section>
   <article>
-    <pre class="prettyprint source linenums"><code>/**
- * Returns a new array applying the function to each item in the array
+    <pre class="prettyprint source linenums"><code>import reverse from '../reverse';
+
+/**
+ * Calls fn reversing the arguments provided
  *
  * @func
- * @param {Array} x
  * @param {Function} fn
- * @return {Array}
- *
+ * @return {Function}
  * @example
- * map([1,2,3], v => v * 2); //[2,4,6]
+ * const concat = (...x) => reduce(x, (acc, curr) => `${acc}${curr}`, '');
+ * const reverseConcat = reverseArgs(concat);
+ * reverseConcat('a', 'b', 'c'); // 'cba'
  */
-const map = (x, fn) => x.map(fn);
+const reverseArgs = fn => (...x) => fn(...reverse(x));
 
-export default map;
+export default reverseArgs;
 </code></pre>
   </article>
 </section>

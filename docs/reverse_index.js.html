@@ -72,7 +72,7 @@
       funkp
     </h3>
 
-    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#copy">copy</a></li><li><a href="global.html#filter">filter</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#flatten">flatten</a></li><li><a href="global.html#head">head</a></li><li><a href="global.html#isDef">isDef</a></li><li><a href="global.html#isUndef">isUndef</a></li><li><a href="global.html#last">last</a></li><li><a href="global.html#length">length</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#partition">partition</a></li><li><a href="global.html#reduce">reduce</a></li><li><a href="global.html#reduceRight">reduceRight</a></li><li><a href="global.html#reject">reject</a></li><li><a href="global.html#reverse">reverse</a></li><li><a href="global.html#swap">swap</a></li><li><a href="global.html#tail">tail</a></li></ul>
+    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#arr">arr</a></li><li><a href="global.html#copy">copy</a></li><li><a href="global.html#filter">filter</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#flatten">flatten</a></li><li><a href="global.html#head">head</a></li><li><a href="global.html#isDef">isDef</a></li><li><a href="global.html#isUndef">isUndef</a></li><li><a href="global.html#last">last</a></li><li><a href="global.html#length">length</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#partial">partial</a></li><li><a href="global.html#partition">partition</a></li><li><a href="global.html#pluck">pluck</a></li><li><a href="global.html#reduce">reduce</a></li><li><a href="global.html#reduceRight">reduceRight</a></li><li><a href="global.html#reject">reject</a></li><li><a href="global.html#reverse">reverse</a></li><li><a href="global.html#reverseArgs">reverseArgs</a></li><li><a href="global.html#spreadArg">spreadArg</a></li><li><a href="global.html#swap">swap</a></li><li><a href="global.html#tail">tail</a></li></ul>
   </nav>
 
   <div id="main">
@@ -88,7 +88,6 @@
 <section>
   <article>
     <pre class="prettyprint source linenums"><code>import copy from '../copy';
-import isArray from '../isArray';
 
 /**
  * Return a reversed copy of the array
@@ -100,7 +99,7 @@ import isArray from '../isArray';
  * @example
  * reverse([1,2,3]); //[3,2,1]
  */
-const reverse = x => (isArray(x) ? copy(x).reverse() : []);
+const reverse = x => copy(x).reverse();
 
 export default reverse;
 </code></pre>
