@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      flatten/index.js - Documentation
+      reject/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        flatten/index.js
+        reject/index.js
       </h1>
     
 
@@ -87,23 +87,20 @@
 
 <section>
   <article>
-    <pre class="prettyprint source linenums"><code>import isDef from '../isDef';
-import isArray from '../isArray';
+    <pre class="prettyprint source linenums"><code>import isArray from '../isArray';
 
 /**
- * Flatten nested arrays into an unidimensional ones
+ * Return a rejected copy of the array
  *
  * @func
- * @param {Array} - Array to flatten
- * @return {Array}
- *
+ * @param {Array} arr
+ * @param {Function} fn - filter function
  * @example
- * flatten([['a'], ['b'], ['c'], ['d']]); // ['a', 'b', 'c', 'd']
+ * reject([1, 2, 3], v => v % 2 === 0) // [1, 3]
  */
-const flatten = ([x, ...xs]) =>
-  isDef(x) ? (isArray(x) ? [...flatten(x), ...flatten(xs)] : [x, ...flatten(xs)]) : [];
+const reject = (arr, fn) => (isArray(arr) ? arr.filter((v, k) => !fn(v, k)) : []);
 
-export default flatten;
+export default reject;
 </code></pre>
   </article>
 </section>

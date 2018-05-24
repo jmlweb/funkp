@@ -1,4 +1,3 @@
-import isArray from '../isArray';
 import first from '../first';
 import reverse from '../reverse';
 
@@ -12,6 +11,6 @@ import reverse from '../reverse';
  * @example
  * last(['a', 'b', 'c'], 2); // ['b', 'c']
  */
-const last = (x, n = 1) => (isArray(x) ? reverse(first(reverse(x), n)) : []);
+const last = (x, n = 1) => reverse(first(reverse(x), n));
 
 export default last;

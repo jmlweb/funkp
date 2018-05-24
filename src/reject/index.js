@@ -1,4 +1,4 @@
-import isArray from '../isArray';
+import filter from '../filter';
 
 /**
  * Return a rejected copy of the array
@@ -9,6 +9,6 @@ import isArray from '../isArray';
  * @example
  * reject([1, 2, 3], v => v % 2 === 0) // [1, 3]
  */
-const reject = (arr, fn) => (isArray(arr) ? arr.filter((v, k) => !fn(v, k)) : []);
+const reject = (arr, fn) => filter(arr, (v, k) => !fn(v, k));
 
 export default reject;

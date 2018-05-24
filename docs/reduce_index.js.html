@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      flatten/index.js - Documentation
+      reduce/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        flatten/index.js
+        reduce/index.js
       </h1>
     
 
@@ -87,23 +87,22 @@
 
 <section>
   <article>
-    <pre class="prettyprint source linenums"><code>import isDef from '../isDef';
-import isArray from '../isArray';
+    <pre class="prettyprint source linenums"><code>import isArray from '../isArray';
 
 /**
- * Flatten nested arrays into an unidimensional ones
+ * Applies a function against an accumulator and each element in the array (from left to right)
+ * to reduce it to a single value
  *
  * @func
- * @param {Array} - Array to flatten
- * @return {Array}
- *
+ * @param {Array} arr
+ * @param {Function} fn
+ * @param {*} initial
  * @example
- * flatten([['a'], ['b'], ['c'], ['d']]); // ['a', 'b', 'c', 'd']
+ * reduce([1, 2, 3], (acc, curr) => acc + curr, 0); // 6
  */
-const flatten = ([x, ...xs]) =>
-  isDef(x) ? (isArray(x) ? [...flatten(x), ...flatten(xs)] : [x, ...flatten(xs)]) : [];
+const reduce = (arr, fn, initial) => (isArray(arr) ? arr.reduce(fn, initial) : initial);
 
-export default flatten;
+export default reduce;
 </code></pre>
   </article>
 </section>

@@ -1,5 +1,3 @@
-import isArray from '../isArray';
-
 /**
  * Return an exact copy of the array
  *
@@ -10,6 +8,6 @@ import isArray from '../isArray';
  * @example
  * copy(['a', 'b', 'c']) // ['a', 'b', 'c']
  */
-const copy = x => (isArray(x) ? [...x] : []);
+const copy = x => [...x];
 
 export default copy;

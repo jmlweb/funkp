@@ -4,11 +4,6 @@ import partition from './';
 import map from '../map';
 
 describe('partition', () => {
-  it('returns empty array when no array is provided as parameter', () => {
-    const tested = partition(undefined);
-    const expected = [[], []];
-    assert.deepStrictEqual(tested, expected, 'Should return an empty array');
-  });
   it('works with array of 3 strings', () => {
     const tested = partition([1, 2, 3], v => v % 2 === 0);
     const expected = [[2], [1, 3]];

@@ -3,11 +3,6 @@ import assert from 'assert';
 import last from './';
 
 describe('last', () => {
-  it('returns empty array when no array is provided as parameter', () => {
-    const tested = last(null, 3);
-    const expected = [];
-    assert.deepStrictEqual(tested, expected, 'Should return an empty array');
-  });
   it('pass 1 as default n parameter', () => {
     const tested = last([1, 2, 3]);
     const expected = [3];

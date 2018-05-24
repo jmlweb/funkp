@@ -3,11 +3,6 @@ import assert from 'assert';
 import reverse from './';
 
 describe('reverse', () => {
-  it('returns empty array when no array is provided as parameter', () => {
-    const tested = reverse(null);
-    const expected = [];
-    assert.deepStrictEqual(tested, expected, 'Should return an empty array');
-  });
   it('works with array of 3 strings', () => {
     const tested = reverse(['a', 'b', 'c']);
     const expected = ['c', 'b', 'a'];

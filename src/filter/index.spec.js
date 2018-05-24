@@ -4,11 +4,6 @@ import filter from './';
 import map from '../map';
 
 describe('filter', () => {
-  it('returns empty array when no array is provided as parameter', () => {
-    const tested = filter(undefined);
-    const expected = [];
-    assert.deepStrictEqual(tested, expected, 'Should return an empty array');
-  });
   it('works with array of 3 strings', () => {
     const tested = filter([1, 2, 3], v => v % 2 === 0);
     const expected = [2];

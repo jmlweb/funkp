@@ -11,7 +11,8 @@ import isArray from '../isArray';
  * @example
  * flatten([['a'], ['b'], ['c'], ['d']]); // ['a', 'b', 'c', 'd']
  */
+
 const flatten = ([x, ...xs]) =>
-  isDef(x) ? (isArray(x) ? [...flatten(x), ...flatten(xs)] : [x, ...flatten(xs)]) : [];
+  (isDef(x) ? [...(isArray(x) ? flatten(x) : [x]), ...flatten(xs)] : []);
 
 export default flatten;

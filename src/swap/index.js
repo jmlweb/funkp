@@ -12,15 +12,12 @@ import map from '../map';
  * @example
  * swap(['a', 'b', 'c'], 2, 0); //['c', 'b', 'a']
  */
-const swap = (x, i, j) =>
-  map(x, (v, k) => {
-    if (k === i) {
-      return x[j];
-    }
-    if (k === j) {
-      return x[i];
-    }
-    return v;
-  });
+const swap = (x, i, j) => {
+  const changes = {
+    [i]: x[j],
+    [j]: x[i],
+  };
+  return map(x, (v, k) => changes[k] || v);
+};
 
 export default swap;

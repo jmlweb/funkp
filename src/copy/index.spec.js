@@ -3,11 +3,6 @@ import assert from 'assert';
 import copy from './';
 
 describe('copy', () => {
-  it('returns empty array when no array is provided as parameter', () => {
-    const tested = copy(null);
-    const expected = [];
-    assert.deepStrictEqual(tested, expected, 'Should return an empty array');
-  });
   it('works with array of 3 strings', () => {
     const tested = copy(['a', 'b', 'c']);
     const expected = ['a', 'b', 'c'];

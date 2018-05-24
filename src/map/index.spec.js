@@ -3,11 +3,6 @@ import assert from 'assert';
 import map from './';
 
 describe('map', () => {
-  it('returns empty array when no array is provided as parameter', () => {
-    const tested = map(null);
-    const expected = [];
-    assert.deepStrictEqual(tested, expected, 'Should return an empty array');
-  });
   it('works with array of 3 strings', () => {
     const tested = map([1, 2, 3], v => v * 2);
     const expected = [2, 4, 6];

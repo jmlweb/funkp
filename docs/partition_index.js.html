@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      flatten/index.js - Documentation
+      partition/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        flatten/index.js
+        partition/index.js
       </h1>
     
 
@@ -87,23 +87,23 @@
 
 <section>
   <article>
-    <pre class="prettyprint source linenums"><code>import isDef from '../isDef';
-import isArray from '../isArray';
+    <pre class="prettyprint source linenums"><code>import filter from '../filter';
+import reject from '../reject';
 
 /**
- * Flatten nested arrays into an unidimensional ones
+ * Returns an array with two arrays inside:
+ * - First one includes items which pass the filter function
+ * - Second one includes items which rejects the filter function
  *
  * @func
- * @param {Array} - Array to flatten
- * @return {Array}
- *
+ * @param {Array} arr
+ * @param {Function} fn
  * @example
- * flatten([['a'], ['b'], ['c'], ['d']]); // ['a', 'b', 'c', 'd']
+ * partition([1,2,3], v => v % 2 === 0); // [[2], [1, 3]]
  */
-const flatten = ([x, ...xs]) =>
-  isDef(x) ? (isArray(x) ? [...flatten(x), ...flatten(xs)] : [x, ...flatten(xs)]) : [];
+const partition = (arr, fn) => [filter(arr, fn), reject(arr, fn)];
 
-export default flatten;
+export default partition;
 </code></pre>
   </article>
 </section>

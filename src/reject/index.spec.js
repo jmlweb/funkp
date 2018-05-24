@@ -4,11 +4,6 @@ import reject from './';
 import map from '../map';
 
 describe('reject', () => {
-  it('returns empty array when no array is provided as parameter', () => {
-    const tested = reject(undefined);
-    const expected = [];
-    assert.deepStrictEqual(tested, expected, 'Should return an empty array');
-  });
   it('works with array of 3 strings', () => {
     const tested = reject([1, 2, 3], v => v % 2 === 0);
     const expected = [1, 3];

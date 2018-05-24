@@ -1,5 +1,3 @@
-import isArray from '../isArray';
-
 /**
  * Return a filtered copy of the array
  *
@@ -9,6 +7,6 @@ import isArray from '../isArray';
  * @example
  * filter([1, 2, 3], v => v % 2 === 0) // [2]
  */
-const filter = (arr, fn) => (isArray(arr) ? arr.filter(fn) : []);
+const filter = (arr, fn) => arr.filter(fn);
 
 export default filter;

@@ -1,5 +1,4 @@
 import copy from '../copy';
-import isArray from '../isArray';
 
 /**
  * Return a reversed copy of the array
@@ -11,6 +10,6 @@ import isArray from '../isArray';
  * @example
  * reverse([1,2,3]); //[3,2,1]
  */
-const reverse = x => (isArray(x) ? copy(x).reverse() : []);
+const reverse = x => copy(x).reverse();
 
 export default reverse;
