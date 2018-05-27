@@ -1,11 +1,11 @@
 {
-  "name": "funkp",
+  "name": "pfunk",
   "version": "0.0.1",
-  "description": "Funkp - Utils for JavaScript FP coding style",
+  "description": "Pfunk - Utils for JavaScript FP coding style",
   "main": "cjs/index.js",
   "module": "es/index.js",
   "browser": "iife/index.js",
-  "repository": "git@github.com:jmlweb/funkp.git",
+  "repository": "git@github.com:jmlweb/pfunk.git",
   "author": "José Manuel Lucas <josemanuel@jmlweb.es>",
   "license": "MIT",
   "scripts": {

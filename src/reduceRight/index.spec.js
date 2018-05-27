@@ -12,7 +12,7 @@ describe('reduceRight', () => {
   it('works with array of 3', () => {
     const tested = reduceRight([1, 2, 3], (acc, curr) => [...acc, curr], []);
     const expected = [3, 2, 1];
-    assert.deepStrictEqual(tested, expected, 'Should return 6');
+    assert.deepStrictEqual(tested, expected, 'Should return [3, 2, 1]');
   });
   it('works with big array', () => {
     const arr = map(Array.from({ length: 9996 }), (v, k) => k + 1);
