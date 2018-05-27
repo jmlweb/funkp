@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      isDef/index.js - Documentation
+      spreadArgs/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        isDef/index.js
+        spreadArgs/index.js
       </h1>
     
 
@@ -88,20 +88,18 @@
 <section>
   <article>
     <pre class="prettyprint source linenums"><code>/**
- * Check if argument supplied is defined
+ * Calls a function with all arguments passed as an array
  *
  * @func
- * @param {*} x => value to be checked
- * @return {Boolean}
- *
+ * @param {Function} fn
+ * @return {Function}
  * @example
- * const a = { foo: 'bar' }
- * isDef(a.foo); //true
- * isDef(a.bar); //false
+ * const add = x => reduce(x, (acc, curr) => acc + curr, 0);
+ * spreadArgs(add)(1, 2, 3); // 6
  */
-const isDef = x => typeof x !== 'undefined';
+const spreadArgs = fn => (...x) => fn(x);
 
-export default isDef;
+export default spreadArgs;
 </code></pre>
   </article>
 </section>
