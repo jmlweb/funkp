@@ -15,4 +15,9 @@ describe('reject', () => {
     const expected = 5000;
     assert.equal(tested, expected, 'Should return 5000');
   });
+  it('returns only falsy items if no function is provided', () => {
+    const tested = reject([null, 1, undefined, 2, 3]);
+    const expected = [null, undefined];
+    assert.deepStrictEqual(tested, expected, 'Should return []');
+  });
 });

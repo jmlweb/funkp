@@ -1,4 +1,5 @@
 import filter from '../filter';
+import identity from '../identity';
 
 /**
  * Return a rejected copy of the array
@@ -9,6 +10,6 @@ import filter from '../filter';
  * @example
  * reject([1, 2, 3], v => v % 2 === 0) // [1, 3]
  */
-const reject = (arr, fn) => filter(arr, (v, k) => !fn(v, k));
+const reject = (arr, fn = identity) => filter(arr, (v, k) => !fn(v, k));
 
 export default reject;

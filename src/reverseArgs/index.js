@@ -1,3 +1,4 @@
+import identity from '../identity';
 import reverse from '../reverse';
 
 /**
@@ -11,6 +12,6 @@ import reverse from '../reverse';
  * const reverseConcat = reverseArgs(concat);
  * reverseConcat('a', 'b', 'c'); // 'cba'
  */
-const reverseArgs = fn => (...x) => fn(...reverse(x));
+const reverseArgs = (fn = identity) => (...x) => fn(...reverse(x));
 
 export default reverseArgs;

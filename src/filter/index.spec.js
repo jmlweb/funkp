@@ -15,4 +15,9 @@ describe('filter', () => {
     const expected = 4999;
     assert.equal(tested, expected, 'Should return 4999');
   });
+  it('pass identity as default function', () => {
+    const tested = filter([undefined, 'a', null, 'b']);
+    const expected = ['a', 'b'];
+    assert.deepStrictEqual(tested, expected, 'Should return [a, b]');
+  });
 });

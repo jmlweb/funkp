@@ -70,7 +70,7 @@
       funkp
     </h3>
 
-    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#arr">arr</a></li><li><a href="global.html#compose">compose</a></li><li><a href="global.html#copy">copy</a></li><li><a href="global.html#filter">filter</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#flatten">flatten</a></li><li><a href="global.html#head">head</a></li><li><a href="global.html#isDef">isDef</a></li><li><a href="global.html#isUndef">isUndef</a></li><li><a href="global.html#last">last</a></li><li><a href="global.html#length">length</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#max">max</a></li><li><a href="global.html#min">min</a></li><li><a href="global.html#partial">partial</a></li><li><a href="global.html#partition">partition</a></li><li><a href="global.html#pipe">pipe</a></li><li><a href="global.html#pluck">pluck</a></li><li><a href="global.html#reduce">reduce</a></li><li><a href="global.html#reduceRight">reduceRight</a></li><li><a href="global.html#reject">reject</a></li><li><a href="global.html#reverse">reverse</a></li><li><a href="global.html#reverseArgs">reverseArgs</a></li><li><a href="global.html#spreadArgs">spreadArgs</a></li><li><a href="global.html#swap">swap</a></li><li><a href="global.html#tail">tail</a></li></ul>
+    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#arr">arr</a></li><li><a href="global.html#compose">compose</a></li><li><a href="global.html#constant">constant</a></li><li><a href="global.html#copy">copy</a></li><li><a href="global.html#curry">curry</a></li><li><a href="global.html#filter">filter</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#flatten">flatten</a></li><li><a href="global.html#gatherArgs">gatherArgs</a></li><li><a href="global.html#head">head</a></li><li><a href="global.html#identity">identity</a></li><li><a href="global.html#isDef">isDef</a></li><li><a href="global.html#isUndef">isUndef</a></li><li><a href="global.html#last">last</a></li><li><a href="global.html#length">length</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#max">max</a></li><li><a href="global.html#min">min</a></li><li><a href="global.html#partial">partial</a></li><li><a href="global.html#partialRight">partialRight</a></li><li><a href="global.html#partition">partition</a></li><li><a href="global.html#pipe">pipe</a></li><li><a href="global.html#pluck">pluck</a></li><li><a href="global.html#reduce">reduce</a></li><li><a href="global.html#reduceRight">reduceRight</a></li><li><a href="global.html#reject">reject</a></li><li><a href="global.html#reverse">reverse</a></li><li><a href="global.html#reverseArgs">reverseArgs</a></li><li><a href="global.html#spreadArgs">spreadArgs</a></li><li><a href="global.html#swap">swap</a></li><li><a href="global.html#tail">tail</a></li><li><a href="global.html#unary">unary</a></li><li><a href="global.html#uncurry">uncurry</a></li></ul>
   </nav>
 
   <div id="main">
@@ -500,6 +500,167 @@ getFinalPrice(10); // addTwo(multiplyByFour(10)) // 42</code></pre>
   
 
   <span class='name-container'>
+    <a class="link-icon" href="#constant">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="constant">
+      <span class="type-signature"></span>constant<span class="signature">(x)</span><span class="type-signature"> &rarr; {function}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Returns the parameter as the result of a function</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>x</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      *
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="constant_index.js.html">constant/index.js</a>, <a href="constant_index.js.html#line11">line 11</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#constant-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="constant-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>const fn = constant(1);
+fn(); // 1</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
     <a class="link-icon" href="#copy">
       <svg height="20" width="20" style="fill: black;">
         <use xlink:href="#linkIcon"></use>
@@ -660,6 +821,168 @@ getFinalPrice(10); // addTwo(multiplyByFour(10)) // 42</code></pre>
   
 
   <span class='name-container'>
+    <a class="link-icon" href="#curry">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="curry">
+      <span class="type-signature"></span>curry<span class="signature">(fn)</span><span class="type-signature"> &rarr; {function}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Breaks down a function with many parameters into a series of unary functions</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>fn</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="curry_index.js.html">curry/index.js</a>, <a href="curry_index.js.html#line13">line 13</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#curry-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="curry-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>const add = (x, y, z) => x + y + z;
+const curriedAdd = curry(add);
+curriedAdd(1)(2)(3); // 6</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
     <a class="link-icon" href="#filter">
       <svg height="20" width="20" style="fill: black;">
         <use xlink:href="#linkIcon"></use>
@@ -802,7 +1125,7 @@ getFinalPrice(10); // addTwo(multiplyByFour(10)) // 42</code></pre>
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="filter_index.js.html">filter/index.js</a>, <a href="filter_index.js.html#line10">line 10</a>
+          <a href="filter_index.js.html">filter/index.js</a>, <a href="filter_index.js.html#line12">line 12</a>
         </li>
       </ul>
     </dd>
@@ -1206,6 +1529,167 @@ getFinalPrice(10); // addTwo(multiplyByFour(10)) // 42</code></pre>
   
 
   <span class='name-container'>
+    <a class="link-icon" href="#gatherArgs">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="gatherArgs">
+      <span class="type-signature"></span>gatherArgs<span class="signature">(fn)</span><span class="type-signature"> &rarr; {function}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Calls a function with all arguments passed as an array</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>fn</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="gatherArgs_index.js.html">gatherArgs/index.js</a>, <a href="gatherArgs_index.js.html#line13">line 13</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#gatherArgs-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="gatherArgs-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>const add = x => reduce(x, (acc, curr) => acc + curr, 0);
+gatherArgs(add)(1, 2, 3); // 6</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
     <a class="link-icon" href="#head">
       <svg height="20" width="20" style="fill: black;">
         <use xlink:href="#linkIcon"></use>
@@ -1351,6 +1835,166 @@ getFinalPrice(10); // addTwo(multiplyByFour(10)) // 42</code></pre>
 
   <pre class="prettyprint"><code>const array = ['a', 'b', 'c'];
 head(array) // 'a'</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#identity">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="identity">
+      <span class="type-signature"></span>identity<span class="signature">(x)</span><span class="type-signature"> &rarr; {*}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Returns the value untouched</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>x</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      *
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="identity_index.js.html">identity/index.js</a>, <a href="identity_index.js.html#line10">line 10</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#identity-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="identity-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>[undefined, 'a', null, 'b'].filter(identity); // ['a', 'b']</code></pre>
 
 
   </div>
@@ -2190,7 +2834,7 @@ isDef(a.bar); //true</code></pre>
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="map_index.js.html">map/index.js</a>, <a href="map_index.js.html#line12">line 12</a>
+          <a href="map_index.js.html">map/index.js</a>, <a href="map_index.js.html#line14">line 14</a>
         </li>
       </ul>
     </dd>
@@ -2756,6 +3400,217 @@ isDef(a.bar); //true</code></pre>
   <pre class="prettyprint"><code>const add = (x, y) => x + y;
 const addTo3 = partial(add, 3);
 addTo3(2); // 5</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#partialRight">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="partialRight">
+      <span class="type-signature"></span>partialRight<span class="signature">(fn, &hellip;x)</span><span class="type-signature"> &rarr; {function}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Partially apply a function, merging any number of arguments from right to left</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+        <th>Attributes</th>
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>fn</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+
+            
+
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The function to be applied</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>x</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+
+            
+
+            
+              &lt;repeatable><br>
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>the list of elements</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="partialRight_index.js.html">partialRight/index.js</a>, <a href="partialRight_index.js.html#line13">line 13</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#partialRight-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="partialRight-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>const division = (x, y) => x / y;
+const division3 = partialRight(division, 3);
+division3(6); // 2</code></pre>
 
 
   </div>
@@ -3904,7 +4759,7 @@ to reduce it to a single value</p>
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="reject_index.js.html">reject/index.js</a>, <a href="reject_index.js.html#line12">line 12</a>
+          <a href="reject_index.js.html">reject/index.js</a>, <a href="reject_index.js.html#line13">line 13</a>
         </li>
       </ul>
     </dd>
@@ -4220,7 +5075,7 @@ to reduce it to a single value</p>
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="reverseArgs_index.js.html">reverseArgs/index.js</a>, <a href="reverseArgs_index.js.html#line14">line 14</a>
+          <a href="reverseArgs_index.js.html">reverseArgs/index.js</a>, <a href="reverseArgs_index.js.html#line15">line 15</a>
         </li>
       </ul>
     </dd>
@@ -4284,7 +5139,7 @@ reverseConcat('a', 'b', 'c'); // 'cba'</code></pre>
 
 
   <div class="description">
-    <p>Calls a function with all arguments passed as an array</p>
+    <p>Calls a function spreading the array received as multiple arguments</p>
   </div>
 
 
@@ -4382,7 +5237,7 @@ reverseConcat('a', 'b', 'c'); // 'cba'</code></pre>
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="spreadArgs_index.js.html">spreadArgs/index.js</a>, <a href="spreadArgs_index.js.html#line11">line 11</a>
+          <a href="spreadArgs_index.js.html">spreadArgs/index.js</a>, <a href="spreadArgs_index.js.html#line13">line 13</a>
         </li>
       </ul>
     </dd>
@@ -4416,8 +5271,8 @@ reverseConcat('a', 'b', 'c'); // 'cba'</code></pre>
     <h5 id="spreadArgs-examples">Example</h5>
     
 
-  <pre class="prettyprint"><code>const add = x => reduce(x, (acc, curr) => acc + curr, 0);
-spreadArgs(add)(1, 2, 3); // 6</code></pre>
+  <pre class="prettyprint"><code>const add = (x, y) => x + y;
+spreadArgs(add)([1, 2]); // 3</code></pre>
 
 
   </div>
@@ -4793,6 +5648,329 @@ spreadArgs(add)(1, 2, 3); // 6</code></pre>
 
   <pre class="prettyprint"><code>const array = ['a', 'b', 'c'];
 tail(array); // ['b', 'c'];</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#unary">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="unary">
+      <span class="type-signature"></span>unary<span class="signature">(fn)</span><span class="type-signature"> &rarr; {function}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Ensures only one parameter is provided to fn</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>fn</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="unary_index.js.html">unary/index.js</a>, <a href="unary_index.js.html#line11">line 11</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#unary-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="unary-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>const fn = (...x) => x.length;
+unary(fn)(1, 2, 3); // 1</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#uncurry">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="uncurry">
+      <span class="type-signature"></span>uncurry<span class="signature">(fn)</span><span class="type-signature"> &rarr; {function}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Groups a series of unary functions into a function with many parameters</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>fn</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="uncurry_index.js.html">uncurry/index.js</a>, <a href="uncurry_index.js.html#line14">line 14</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#uncurry-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="uncurry-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>const add = (x)(y)(z) => x + y + z;
+const curriedAdd = uncurry(add);
+curriedAdd(1, 2, 3); // 6</code></pre>
 
 
   </div>

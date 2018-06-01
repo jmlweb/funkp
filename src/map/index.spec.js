@@ -14,4 +14,9 @@ describe('map', () => {
     const expected = 9999;
     assert.equal(tested, expected, 'Should return 9999');
   });
+  it('returns the same if no function is passed', () => {
+    const tested = map([1, 2, 3]);
+    const expected = [1, 2, 3];
+    assert.deepStrictEqual(tested, expected, 'Should return [1, 2, 3]');
+  });
 });

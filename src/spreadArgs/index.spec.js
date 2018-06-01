@@ -1,12 +1,16 @@
 import assert from 'assert';
-import reduce from '../reduce';
 import spreadArgs from './';
 
 describe('spreadArgs', () => {
-  const add = x => reduce(x, (acc, curr) => acc + curr, 0);
+  const add = (x, y) => x + y;
   it('works', () => {
-    const tested = spreadArgs(add)(1, 2, 3);
-    const expected = 6;
-    assert.equal(tested, expected, 'Should return 6');
+    const tested = spreadArgs(add)([1, 2]);
+    const expected = 3;
+    assert.equal(tested, expected, 'Should return 3');
+  });
+  it('calls identity if no function is provided', () => {
+    const tested = spreadArgs()([1, 2]);
+    const expected = 1;
+    assert.equal(tested, expected, 'Should return 1');
   });
 });
