@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "P-Funk - Utils for JavaScript FP coding style",
   "keywords": ["fp", "javascript", "functional programming", "pfunk", "utility belt"],
+  "homepage": "https://jmlweb.github.io/pfunk/",
   "main": "cjs/index.js",
   "module": "es/index.js",
   "browser": "iife/index.js",

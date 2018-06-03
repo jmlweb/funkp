@@ -70,7 +70,7 @@
       funkp
     </h3>
 
-    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#arr">arr</a></li><li><a href="global.html#compose">compose</a></li><li><a href="global.html#constant">constant</a></li><li><a href="global.html#copy">copy</a></li><li><a href="global.html#curry">curry</a></li><li><a href="global.html#filter">filter</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#flatten">flatten</a></li><li><a href="global.html#gatherArgs">gatherArgs</a></li><li><a href="global.html#head">head</a></li><li><a href="global.html#identity">identity</a></li><li><a href="global.html#isDef">isDef</a></li><li><a href="global.html#isUndef">isUndef</a></li><li><a href="global.html#last">last</a></li><li><a href="global.html#length">length</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#max">max</a></li><li><a href="global.html#min">min</a></li><li><a href="global.html#partial">partial</a></li><li><a href="global.html#partialRight">partialRight</a></li><li><a href="global.html#partition">partition</a></li><li><a href="global.html#pipe">pipe</a></li><li><a href="global.html#pluck">pluck</a></li><li><a href="global.html#reduce">reduce</a></li><li><a href="global.html#reduceRight">reduceRight</a></li><li><a href="global.html#reject">reject</a></li><li><a href="global.html#reverse">reverse</a></li><li><a href="global.html#reverseArgs">reverseArgs</a></li><li><a href="global.html#spreadArgs">spreadArgs</a></li><li><a href="global.html#swap">swap</a></li><li><a href="global.html#tail">tail</a></li><li><a href="global.html#unary">unary</a></li><li><a href="global.html#uncurry">uncurry</a></li></ul>
+    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#arr">arr</a></li><li><a href="global.html#compose">compose</a></li><li><a href="global.html#constant">constant</a></li><li><a href="global.html#copy">copy</a></li><li><a href="global.html#curry">curry</a></li><li><a href="global.html#curryProps">curryProps</a></li><li><a href="global.html#filter">filter</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#flatten">flatten</a></li><li><a href="global.html#gatherArgs">gatherArgs</a></li><li><a href="global.html#head">head</a></li><li><a href="global.html#identity">identity</a></li><li><a href="global.html#isDef">isDef</a></li><li><a href="global.html#isUndef">isUndef</a></li><li><a href="global.html#last">last</a></li><li><a href="global.html#length">length</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#max">max</a></li><li><a href="global.html#min">min</a></li><li><a href="global.html#partial">partial</a></li><li><a href="global.html#partialProps">partialProps</a></li><li><a href="global.html#partialRight">partialRight</a></li><li><a href="global.html#partition">partition</a></li><li><a href="global.html#pipe">pipe</a></li><li><a href="global.html#pluck">pluck</a></li><li><a href="global.html#reduce">reduce</a></li><li><a href="global.html#reduceRight">reduceRight</a></li><li><a href="global.html#reject">reject</a></li><li><a href="global.html#reverse">reverse</a></li><li><a href="global.html#reverseArgs">reverseArgs</a></li><li><a href="global.html#spreadArgs">spreadArgs</a></li><li><a href="global.html#swap">swap</a></li><li><a href="global.html#tail">tail</a></li><li><a href="global.html#unary">unary</a></li><li><a href="global.html#uncurry">uncurry</a></li></ul>
   </nav>
 
   <div id="main">
@@ -971,6 +971,210 @@ fn(); // 1</code></pre>
   <pre class="prettyprint"><code>const add = (x, y, z) => x + y + z;
 const curriedAdd = curry(add);
 curriedAdd(1)(2)(3); // 6</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#curryProps">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="curryProps">
+      <span class="type-signature"></span>curryProps<span class="signature">(fn, arity)</span><span class="type-signature"> &rarr; {function}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Breaks down a function with many parameters into a series of unary functions, without order</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+        <th>Default</th>
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>fn</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+          <td class="default">
+            
+          </td>
+        
+
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>arity</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Number
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+          <td class="default">
+            
+              1
+            
+          </td>
+        
+
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="curryProps_index.js.html">curryProps/index.js</a>, <a href="curryProps_index.js.html#line14">line 14</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#curryProps-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="curryProps-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>const operation = ({ a, b, c }) => (a - b) / c;
+const curriedPropsOperation = curryProps(operation, 3);
+curriedPropsOperation({ a: 8 })({ b: 2 })({ c: 3 }); // 2
+curriedPropsOperation({ c: 3 })({ a: 8 })({ b: 2 }); // 2</code></pre>
 
 
   </div>
@@ -3400,6 +3604,197 @@ isDef(a.bar); //true</code></pre>
   <pre class="prettyprint"><code>const add = (x, y) => x + y;
 const addTo3 = partial(add, 3);
 addTo3(2); // 5</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#partialProps">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="partialProps">
+      <span class="type-signature"></span>partialProps<span class="signature">(fn, presetArgsObj)</span><span class="type-signature"> &rarr; {function}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Partially apply a function, merging the objects provided as arguments</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>fn</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      *
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>The function to be applied</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>presetArgsObj</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      *
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>the arguments object</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="partialProps_index.js.html">partialProps/index.js</a>, <a href="partialProps_index.js.html#line13">line 13</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#partialProps-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="partialProps-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>const keysToString = obj => Object.keys(obj).join('');
+const partialToString = partialProps(keysToString, { c: 3, d: 4 });
+partialToString({ a: 1, b: 2 }); // 'cdba'</code></pre>
 
 
   </div>

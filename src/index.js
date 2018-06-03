@@ -17,6 +17,7 @@ import map from './map';
 import max from './max';
 import min from './min';
 import partial from './partial';
+import partialProps from './partialProps';
 import partialRight from './partialRight';
 import partition from './partition';
 import pipe from './pipe';
@@ -52,6 +53,7 @@ export { map };
 export { max };
 export { min };
 export { partial };
+export { partialProps };
 export { partialRight };
 export { partition };
 export { pipe };
@@ -88,6 +90,7 @@ export default {
   max,
   min,
   partial,
+  partialProps,
   partialRight,
   partition,
   pipe,

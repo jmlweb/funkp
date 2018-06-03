@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      tail/index.js - Documentation
+      partialProps/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        tail/index.js
+        partialProps/index.js
       </h1>
     
 
@@ -88,19 +88,21 @@
 <section>
   <article>
     <pre class="prettyprint source linenums"><code>/**
- * Return all but the first item in an array
+ * Partially apply a function, merging the objects provided as arguments
  *
  * @func
- * @param {Array}
- * @returns {Array}
- *
+ * @param {*} fn - The function to be applied
+ * @param {*} presetArgsObj - the arguments object
+ * @return {Function}
  * @example
- * const array = ['a', 'b', 'c'];
- * tail(array); // ['b', 'c'];
+ * const keysToString = obj => Object.keys(obj).join('');
+ * const partialToString = partialProps(keysToString, { c: 3, d: 4 });
+ * partialToString({ a: 1, b: 2 }); // 'cdba'
  */
-const tail = ([, ...x]) => x;
+const partialProps = (fn, presetArgsObj) => laterArgsObj =>
+  fn({ ...presetArgsObj, ...laterArgsObj });
 
-export default tail;
+export default partialProps;
 </code></pre>
   </article>
 </section>

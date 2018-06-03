@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      tail/index.js - Documentation
+      curryProps/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -78,7 +78,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        tail/index.js
+        curryProps/index.js
       </h1>
     
 
@@ -88,19 +88,31 @@
 <section>
   <article>
     <pre class="prettyprint source linenums"><code>/**
- * Return all but the first item in an array
+ * Breaks down a function with many parameters into a series of unary functions, without order
  *
  * @func
- * @param {Array}
- * @returns {Array}
- *
+ * @param {Function} fn
+ * @param {Number} arity
+ * @return {Function}
  * @example
- * const array = ['a', 'b', 'c'];
- * tail(array); // ['b', 'c'];
+ * const operation = ({ a, b, c }) => (a - b) / c;
+ * const curriedPropsOperation = curryProps(operation, 3);
+ * curriedPropsOperation({ a: 8 })({ b: 2 })({ c: 3 }); // 2
+ * curriedPropsOperation({ c: 3 })({ a: 8 })({ b: 2 }); // 2
  */
-const tail = ([, ...x]) => x;
+const curryProps = (fn, arity = 1) => {
+  const nextCurried = prevArgsObj => (nextArgsObj = {}) => {
+    const [key] = Object.keys(nextArgsObj);
+    const allArgsObj = { ...prevArgsObj, [key]: nextArgsObj[key] };
+    if (Object.keys(allArgsObj).length >= arity) {
+      return fn(allArgsObj);
+    }
+    return nextCurried(allArgsObj);
+  };
+  return nextCurried({});
+};
 
-export default tail;
+export default curryProps;
 </code></pre>
   </article>
 </section>
