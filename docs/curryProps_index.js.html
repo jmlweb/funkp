@@ -103,6 +103,9 @@
 const curryProps = (fn, arity = 1) => {
   const nextCurried = prevArgsObj => (nextArgsObj = {}) => {
     const [key] = Object.keys(nextArgsObj);
+    if (!key) {
+      return nextCurried(prevArgsObj);
+    }
     const allArgsObj = { ...prevArgsObj, [key]: nextArgsObj[key] };
     if (Object.keys(allArgsObj).length >= arity) {
       return fn(allArgsObj);
