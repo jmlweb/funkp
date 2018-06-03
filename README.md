@@ -1,4 +1,4 @@
-# pfunk - Utils for JavaScript FP coding style
+# P-Funk - Utils for JavaScript FP coding style
 
 [![Build Status](https://travis-ci.com/jmlweb/pfunk.svg?branch=master)](https://travis-ci.com/jmlweb/pfunk)
 

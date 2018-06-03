@@ -1,28 +1,33 @@
 {
   "name": "pfunk",
   "version": "0.0.1",
-  "description": "Pfunk - Utils for JavaScript FP coding style",
+  "description": "P-Funk - Utils for JavaScript FP coding style",
+  "keywords": ["fp", "javascript", "functional programming", "pfunk", "utility belt"],
   "main": "cjs/index.js",
   "module": "es/index.js",
   "browser": "iife/index.js",
   "repository": "git@github.com:jmlweb/pfunk.git",
   "author": "José Manuel Lucas <josemanuel@jmlweb.es>",
   "license": "MIT",
+  "engines": {
+    "node": ">=6",
+    "npm": ">= 3.10.10"
+  },
   "scripts": {
     "test":
       "nyc --check-coverage --lines 95 --functions 95 --branches 95 --reporter=text --reporter=html mocha --require @babel/register --timeout=3000 src/**/*.spec.js",
     "test:dev": "mocha --watch --require @babel/register src/**/*.spec.js",
     "clean": "rimraf ./cjs ./es ./iife",
-    "prebuild": "yarn clean",
+    "prebuild": "npm run clean",
     "build": "rollup -c",
     "build:dev": "rollup -c -w",
     "doc": "jsdoc --configure .jsdoc.json --verbose",
-    "predoc:serve": "yarn doc",
+    "predoc:serve": "npm run doc",
     "doc:serve": "serve -n -o docs"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test && yarn doc && git add . --all"
+      "pre-commit": "npm test && npm run doc && git add . --all"
     }
   },
   "devDependencies": {
