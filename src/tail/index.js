@@ -9,6 +9,6 @@
  * const array = ['a', 'b', 'c'];
  * tail(array); // ['b', 'c'];
  */
-const tail = ([, ...x]) => x;
+const tail = ([, ...lastArgs]) => lastArgs;
 
 export default tail;

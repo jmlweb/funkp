@@ -10,6 +10,7 @@ import reject from '../reject';
  * @func
  * @param {Array} arr
  * @param {Function} fn
+ *
  * @example
  * partition([1,2,3], v => v % 2 === 0); // [[2], [1, 3]]
  */

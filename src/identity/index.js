@@ -3,7 +3,8 @@
  *
  * @func
  * @param {*} x
- * @return {*}
+ * @returns {*}
+ *
  * @example
  * [undefined, 'a', null, 'b'].filter(identity); // ['a', 'b']
  */

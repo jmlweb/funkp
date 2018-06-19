@@ -9,7 +9,11 @@ describe('compose', () => {
     const getA = partial(pluck, 'a');
     const addTwo = x => x + 2;
     const multiplyByFour = x => 4 * x;
-    const getFinalPrice = compose(addTwo, multiplyByFour, getA);
+    const getFinalPrice = compose(
+      addTwo,
+      multiplyByFour,
+      getA,
+    );
 
     const products = [{ a: 10 }, { a: 5 }, { a: 1 }];
 

@@ -4,7 +4,8 @@
  * @func
  * @param {*} fn - The function to be applied
  * @param {*} presetArgsObj - the arguments object
- * @return {Function}
+ * @returns {Function}
+ *
  * @example
  * const keysToString = obj => Object.keys(obj).join('');
  * const partialToString = partialProps(keysToString, { c: 3, d: 4 });

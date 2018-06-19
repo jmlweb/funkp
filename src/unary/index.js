@@ -3,7 +3,7 @@
  *
  * @func
  * @param {Function} fn
- * @return {Function}
+ * @returns {Function}
  * @example
  * const fn = (...x) => x.length;
  * unary(fn)(1, 2, 3); // 1

@@ -5,11 +5,11 @@ import identity from '../identity';
  *
  * @func
  * @param {Function} fn
- * @return {Function}
+ * @returns {Function}
  * @example
  * const add = (x, y) => x + y;
  * spreadArgs(add)([1, 2]); // 3
  */
-const spreadArgs = (fn = identity) => x => fn(...x);
+const spreadArgs = (fn = identity) => arr => fn(...arr);
 
 export default spreadArgs;

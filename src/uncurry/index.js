@@ -5,7 +5,8 @@ import reduce from '../reduce';
  *
  * @func
  * @param {Function} fn
- * @return {Function}
+ * @returns {Function}
+ *
  * @example
  * const add = (x)(y)(z) => x + y + z;
  * const curriedAdd = uncurry(add);

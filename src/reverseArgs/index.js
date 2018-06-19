@@ -6,12 +6,12 @@ import reverse from '../reverse';
  *
  * @func
  * @param {Function} fn
- * @return {Function}
+ * @returns {Function}
  * @example
  * const concat = (...x) => reduce(x, (acc, curr) => `${acc}${curr}`, '');
  * const reverseConcat = reverseArgs(concat);
  * reverseConcat('a', 'b', 'c'); // 'cba'
  */
-const reverseArgs = (fn = identity) => (...x) => fn(...reverse(x));
+const reverseArgs = (fn = identity) => (...args) => fn(...reverse(args));
 
 export default reverseArgs;

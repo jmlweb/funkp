@@ -4,7 +4,8 @@
  * @func
  * @param {Function} fn
  * @param {Number} arity
- * @return {Function}
+ * @returns {Function}
+ *
  * @example
  * const operation = ({ a, b, c }) => (a - b) / c;
  * const curriedPropsOperation = curryProps(operation, 3);

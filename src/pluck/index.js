@@ -4,7 +4,8 @@
  * @func
  * @param {*} key
  * @param {Object} obj
- * @return {*}
+ * @returns {*}
+ *
  * @example
  * pluck('a', { a: 10 }); // 10
  */

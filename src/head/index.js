@@ -3,7 +3,7 @@
  *
  * @func
  * @param {Array} - Array to get the first item of
- * @return {*}
+ * @returns {*}
  *
  * @example
  * const array = ['a', 'b', 'c'];

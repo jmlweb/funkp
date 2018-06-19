@@ -6,7 +6,7 @@ import reverse from '../reverse';
  *
  * @param {Array} x - The array to extract the items of
  * @param {Number} n - Number of items
- * @return {Array}
+ * @returns {Array}
  *
  * @example
  * last(['a', 'b', 'c'], 2); // ['b', 'c']

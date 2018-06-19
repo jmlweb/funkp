@@ -5,7 +5,7 @@ import copy from '../copy';
  *
  * @func
  * @param {Array}
- * @return {Array}
+ * @returns {Array}
  *
  * @example
  * reverse([1,2,3]); //[3,2,1]

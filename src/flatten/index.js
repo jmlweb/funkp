@@ -6,7 +6,7 @@ import isArray from '../isArray';
  *
  * @func
  * @param {Array} - Array to flatten
- * @return {Array}
+ * @returns {Array}
  *
  * @example
  * flatten([['a'], ['b'], ['c'], ['d']]); // ['a', 'b', 'c', 'd']

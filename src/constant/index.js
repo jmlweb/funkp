@@ -3,11 +3,12 @@
  *
  * @func
  * @param {*} x
- * @return {Function}
+ * @returns {Function}
+ *
  * @example
  * const fn = constant(1);
  * fn(); // 1
  */
-const constant = x => () => x;
+const constant = arg => () => arg;
 
 export default constant;

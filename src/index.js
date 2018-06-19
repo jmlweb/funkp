@@ -1,4 +1,3 @@
-import arr from './arr';
 import compose from './compose';
 import constant from './constant';
 import copy from './copy';
@@ -13,9 +12,11 @@ import isDef from './isDef';
 import isUndef from './isUndef';
 import last from './last';
 import length from './length';
+import listify from './listify';
 import map from './map';
 import max from './max';
 import min from './min';
+import not from './not';
 import partial from './partial';
 import partialProps from './partialProps';
 import partialRight from './partialRight';
@@ -33,8 +34,8 @@ import swap from './swap';
 import tail from './tail';
 import unary from './unary';
 import uncurry from './uncurry';
+import when from './when';
 
-export { arr };
 export { compose };
 export { constant };
 export { copy };
@@ -49,9 +50,11 @@ export { isDef };
 export { isUndef };
 export { last };
 export { length };
+export { listify };
 export { map };
 export { max };
 export { min };
+export { not };
 export { partial };
 export { partialProps };
 export { partialRight };
@@ -69,9 +72,9 @@ export { swap };
 export { tail };
 export { unary };
 export { uncurry };
+export { when };
 
 export default {
-  arr,
   compose,
   constant,
   copy,
@@ -86,9 +89,11 @@ export default {
   isUndef,
   last,
   length,
+  listify,
   map,
   max,
   min,
+  not,
   partial,
   partialProps,
   partialRight,
@@ -106,4 +111,5 @@ export default {
   tail,
   unary,
   uncurry,
+  when,
 };

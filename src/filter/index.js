@@ -6,6 +6,7 @@ import identity from '../identity';
  * @func
  * @param {Array} arr
  * @param {Function} fn - filter function
+ *
  * @example
  * filter([1, 2, 3], v => v % 2 === 0) // [2]
  */

@@ -5,7 +5,8 @@ import reduce from '../reduce';
  *
  * @func
  * @param {Array} array
- * @return {*}
+ * @returns {*}
+ *
  * @example
  * max([1,2,3]); // 3
  */

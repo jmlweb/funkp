@@ -5,7 +5,8 @@ import identity from '../identity';
  *
  * @func
  * @param {Function} fn
- * @return {Function}
+ * @returns {Function}
+ *
  * @example
  * const add = x => reduce(x, (acc, curr) => acc + curr, 0);
  * gatherArgs(add)(1, 2, 3); // 6

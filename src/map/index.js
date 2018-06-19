@@ -6,11 +6,11 @@ import identity from '../identity';
  * @func
  * @param {Array} x
  * @param {Function} fn
- * @return {Array}
+ * @returns {Array}
  *
  * @example
  * map([1,2,3], v => v * 2); //[2,4,6]
  */
-const map = (x, fn = identity) => x.map(fn);
+const map = (arr, fn = identity) => arr.map(fn);
 
 export default map;

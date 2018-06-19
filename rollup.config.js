@@ -23,7 +23,7 @@ export default {
     // babel({
     //   exclude: 'node_modules/**',
     // }),
-    // uglify({}, minify),
+    uglify({}, minify),
   ],
-  sourcemap: true
+  sourcemap: true,
 };

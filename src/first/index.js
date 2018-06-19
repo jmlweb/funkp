@@ -6,7 +6,7 @@ import isArray from '../isArray';
  * @func
  * @param {Array} - Array to extract the items of
  * @param {Number} n - Number of items to extract
- * @return {Array}
+ * @returns {Array}
  *
  * @example
  * first(['a', 'b', 'c'], 2); // 2

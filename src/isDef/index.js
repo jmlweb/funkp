@@ -3,7 +3,7 @@
  *
  * @func
  * @param {*} x => value to be checked
- * @return {Boolean}
+ * @returns {Boolean}
  *
  * @example
  * const a = { foo: 'bar' }
