@@ -1,5 +1,3 @@
-import reduce from '../reduce';
-
 /**
  * Return the max value in array
  *
@@ -10,6 +8,6 @@ import reduce from '../reduce';
  * @example
  * max([1,2,3]); // 3
  */
-const max = array => reduce(array, (acc, curr) => (curr > acc ? curr : acc), -Infinity);
+const max = xs => Math.max(...xs);
 
 export default max;
