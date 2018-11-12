@@ -1,5 +1,4 @@
-import first from '../first';
-import reverse from '../reverse';
+import { isArray } from 'util';
 
 /**
  * Extract the last n items from array supplied
@@ -11,6 +10,6 @@ import reverse from '../reverse';
  * @example
  * last(['a', 'b', 'c'], 2); // ['b', 'c']
  */
-const last = (x, n = 1) => reverse(first(reverse(x), n));
+const last = (xs, n = 1) => (isArray(xs) ? xs.slice(-n) : []);
 
 export default last;

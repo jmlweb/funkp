@@ -10,13 +10,7 @@
  * const curriedAdd = curry(add);
  * curriedAdd(1)(2)(3); // 6
  */
-
-const curry = fn => {
-  const nest = (arity, prevArgs) => (...nextArgs) =>
-    (arity - nextArgs.length <= 0
-      ? fn(...prevArgs, ...nextArgs)
-      : nest(arity - nextArgs.length, [...prevArgs, ...nextArgs]));
-  return nest(fn.length, []);
-};
+const curry = (f, arity = f.length, ...args) =>
+  arity <= args.length ? f(...args) : (...argz) => curry(f, arity, ...args, ...argz);
 
 export default curry;

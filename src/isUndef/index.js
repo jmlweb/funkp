@@ -1,3 +1,4 @@
+import not from '../not';
 import isDef from '../isDef';
 
 /**
@@ -12,6 +13,6 @@ import isDef from '../isDef';
  * isDef(a.foo); //false
  * isDef(a.bar); //true
  */
-const isUndef = x => !isDef(x);
+const isUndef = not(isDef);
 
 export default isUndef;
