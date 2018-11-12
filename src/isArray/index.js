@@ -9,6 +9,6 @@
  * isArray([1]); // true
  * isArray(1); // false
  */
-const isArray = x => Array.isArray(x);
+const { isArray } = Array;
 
 export default isArray;

@@ -1,4 +1,3 @@
-import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import { uglify } from 'rollup-plugin-uglify';
@@ -17,13 +16,6 @@ process.env.NODE_ENV = 'build';
 export default {
   input: 'src/index.js',
   output,
-  plugins: [
-    resolve(),
-    commonjs(),
-    // babel({
-    //   exclude: 'node_modules/**',
-    // }),
-    uglify({}, minify),
-  ],
+  plugins: [resolve(), commonjs(), uglify({}, minify)],
   sourcemap: true,
 };

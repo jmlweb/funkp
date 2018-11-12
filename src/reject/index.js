@@ -1,3 +1,4 @@
+import not from '../not';
 import filter from '../filter';
 import identity from '../identity';
 
@@ -10,6 +11,6 @@ import identity from '../identity';
  * @example
  * reject([1, 2, 3], v => v % 2 === 0) // [1, 3]
  */
-const reject = (arr, fn = identity) => filter(arr, (v, k) => !fn(v, k));
+const reject = (arr, f = identity) => filter(arr, not(f));
 
 export default reject;
