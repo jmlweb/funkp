@@ -1,5 +1,3 @@
-import map from '../map';
-
 /**
  * Swap between two positions in array
  *
@@ -12,6 +10,6 @@ import map from '../map';
  * @example
  * swap(['a', 'b', 'c'], 2, 0); // ['c', 'b', 'a']
  */
-const swap = (arr, i, j) => map(arr, (v, k) => (k === i ? arr[j] : k === j ? arr[i] : v));
+const swap = (arr, i, j) => arr.map((v, k) => (k === i ? arr[j] : k === j ? arr[i] : v));
 
 export default swap;

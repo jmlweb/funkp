@@ -22,7 +22,7 @@
     "npm": ">= 3.10.10"
   },
   "scripts": {
-    "test": "nyc --check-coverage --lines 95 --functions 95 --branches 95 --reporter=text --reporter=html mocha --require @babel/register --timeout=3000 src/**/*.spec.js",
+    "test": "nyc --check-coverage --lines 100 --functions 100 --branches 100 --statements 100 --reporter=text --reporter=html mocha --require @babel/register --timeout=3000 src/**/*.spec.js",
     "test:dev": "mocha --watch --require @babel/register src/**/*.spec.js",
     "clean": "rimraf ./cjs",
     "prebuild": "npm run clean",
@@ -38,10 +38,10 @@
     }
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.47",
-    "@babel/core": "^7.0.0-beta.47",
-    "@babel/preset-env": "^7.0.0-beta.47",
-    "@babel/register": "^7.0.0-beta.47",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "assert": "^1.4.1",
     "babel-eslint": "^8.2.3",
     "cross-env": "^5.1.5",
