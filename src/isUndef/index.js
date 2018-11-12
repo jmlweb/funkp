@@ -1,4 +1,4 @@
-import isDef from '../isDef';
+import { isDef, not } from '..';
 
 /**
  * Check if argument supplied is not defined
@@ -12,6 +12,6 @@ import isDef from '../isDef';
  * isDef(a.foo); //false
  * isDef(a.bar); //true
  */
-const isUndef = x => !isDef(x);
+const isUndef = not(isDef);
 
 export default isUndef;
