@@ -13,6 +13,7 @@
     "arrow-parens": 0,
     "function-paren-newline": 0,
     "object-curly-newline": 0,
-    "no-mixed-operators": 0
+    "no-mixed-operators": 0,
+    "no-nested-ternary": 0
   }
 }

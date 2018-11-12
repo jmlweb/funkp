@@ -3,7 +3,7 @@ import reduceRight from '../reduceRight';
 /**
  * Connects functions passed by parameter where data flows from right to left
  *
- * @param {Array} fnArr - Array of functions passed as arguments
+ * @param {Array} fns - Array of functions passed as arguments
  * @returns {*} - The result of the operation
  *
  * @example
@@ -12,6 +12,6 @@ import reduceRight from '../reduceRight';
  * const getFinalPrice = compose(addTwo, multiplyByFour)
  * getFinalPrice(10); // addTwo(multiplyByFour(10)) // 42
  */
-const compose = (...fnArgs) => arg => reduceRight(fnArgs, (acc, curr) => curr(acc), arg);
+const compose = (...fns) => arg => reduceRight(fns, (x, f) => f(x), arg);
 
 export default compose;

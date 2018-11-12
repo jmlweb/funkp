@@ -1,6 +1,4 @@
 import isArray from '../isArray';
-import reduce from '../reduce';
-import reverse from '../reverse';
 
 /**
  * Applies reduce from right to left
@@ -12,7 +10,6 @@ import reverse from '../reverse';
  * @example
  * reduceRight([1, 2, 3], (acc, curr) => [...acc, curr], []); // [3, 2, 1]
  */
-const reduceRight = (arr, fn, initial) =>
-  (isArray(arr) ? reduce(reverse(arr), fn, initial) : initial);
+const reduceRight = (arr, fn, initial) => (isArray(arr) ? arr.reduceRight(fn, initial) : initial);
 
 export default reduceRight;
