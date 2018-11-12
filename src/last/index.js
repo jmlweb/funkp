@@ -1,4 +1,4 @@
-import { isArray } from 'util';
+import isArray from '../isArray';
 
 /**
  * Extract the last n items from array supplied

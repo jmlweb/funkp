@@ -11,8 +11,9 @@
   ],
   "homepage": "https://jmlweb.github.io/pfunk/",
   "main": "cjs/index.js",
-  "module": "es/index.js",
-  "browser": "iife/index.js",
+  "umd:main": "cjs/index.umd.js",
+  "module": "src/index.js",
+  "browser": "cjs/index.js",
   "repository": "git@github.com:jmlweb/pfunk.git",
   "author": "José Manuel Lucas <josemanuel@jmlweb.es>",
   "license": "MIT",
@@ -23,10 +24,10 @@
   "scripts": {
     "test": "nyc --check-coverage --lines 95 --functions 95 --branches 95 --reporter=text --reporter=html mocha --require @babel/register --timeout=3000 src/**/*.spec.js",
     "test:dev": "mocha --watch --require @babel/register src/**/*.spec.js",
-    "clean": "rimraf ./cjs ./es ./iife",
+    "clean": "rimraf ./cjs",
     "prebuild": "npm run clean",
-    "build": "rollup -c",
-    "build:dev": "rollup -c -w",
+    "build": "microbundle",
+    "build:dev": "microbundle -w",
     "doc": "jsdoc --configure .jsdoc.json --verbose",
     "predoc:serve": "npm run doc",
     "doc:serve": "serve -n -o docs"
@@ -50,16 +51,12 @@
     "eslint-plugin-import": "^2.14.0",
     "husky": "^1.1.3",
     "jsdoc": "^3.5.5",
+    "microbundle": "^0.7.0",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
     "prettier": "^1.15.2",
     "rimraf": "^2.6.2",
-    "rollup": "^0.67.1",
-    "rollup-plugin-babel": "^4.0.3",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-uglify": "^6.0.0",
-    "serve": "^10.0.2",
-    "uglify-es": "^3.3.9"
-  }
+    "serve": "^10.0.2"
+  },
+  "dependencies": {}
 }
