@@ -11,6 +11,6 @@ import isArray from '../isArray';
  * @example
  * first(['a', 'b', 'c'], 2); // 2
  */
-const first = ([x, ...xs], n = 1) => (isArray(xs) && n ? [x, ...first(xs, n - 1)] : []);
+const first = (xs, n = 1) => (isArray(xs) ? xs.slice(0, n) : []);
 
 export default first;

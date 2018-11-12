@@ -10,7 +10,6 @@
  * const curriedAdd = curry(add);
  * curriedAdd(1)(2)(3); // 6
  */
-
 const curry = (f, arity = f.length, ...args) =>
   arity <= args.length ? f(...args) : (...argz) => curry(f, arity, ...args, ...argz);
 
