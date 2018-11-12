@@ -1,6 +1,4 @@
-import filter from '../filter';
-import map from '../map';
-import reject from '../reject';
+import { filter, reject } from '..';
 
 /**
  * Returns an array with two arrays inside:
@@ -14,6 +12,6 @@ import reject from '../reject';
  * @example
  * partition([1,2,3], v => v % 2 === 0); // [[2], [1, 3]]
  */
-const partition = (arr, fn) => map([filter, reject], extractFn => extractFn(arr, fn));
+const partition = (xs, fn) => [filter, reject].map(f => f(xs, fn));
 
 export default partition;
