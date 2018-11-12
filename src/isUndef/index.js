@@ -1,4 +1,5 @@
-import { isDef, not } from '..';
+import not from '../not';
+import isDef from '../isDef';
 
 /**
  * Check if argument supplied is not defined

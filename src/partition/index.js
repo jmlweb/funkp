@@ -1,4 +1,5 @@
-import { filter, reject } from '..';
+import filter from '../filter';
+import reject from '../reject';
 
 /**
  * Returns an array with two arrays inside:

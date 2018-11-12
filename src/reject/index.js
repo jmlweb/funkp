@@ -1,4 +1,6 @@
-import { filter, identity, not } from '..';
+import not from '../not';
+import filter from '../filter';
+import identity from '../identity';
 
 /**
  * Return a rejected copy of the array
