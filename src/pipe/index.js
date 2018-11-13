@@ -3,7 +3,7 @@ import reduce from '../reduce';
 /**
  * Connects functions passed by parameter where data flows from left to right
  *
- * @param {Array} fnArr - Array of functions passed as arguments
+ * @param {Array} fns - Array of functions passed as arguments
  * @returns {*} - The result of the operation
  *
  * @example
@@ -12,6 +12,6 @@ import reduce from '../reduce';
  * const getFinalPrice = pipe(addTwo, multiplyByFour)
  * getFinalPrice(10); // multiplyByFour(addTwo(10)) // 48
  */
-const pipe = (...fnArgs) => arg => reduce(fnArgs, (acc, curr) => curr(acc), arg);
+const pipe = (...fns) => arg => reduce(fns, (x, f) => f(x), arg);
 
 export default pipe;

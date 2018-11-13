@@ -1,5 +1,3 @@
-import reduce from '../reduce';
-
 /**
  * Return the min value in array
  *
@@ -10,6 +8,6 @@ import reduce from '../reduce';
  * @example
  * min([1,2,3]); // 1
  */
-const min = arr => reduce(arr, (acc, curr) => (curr < acc ? curr : acc), Infinity);
+const min = xs => Math.min(...xs);
 
 export default min;

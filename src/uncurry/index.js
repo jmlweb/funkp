@@ -8,10 +8,10 @@ import reduce from '../reduce';
  * @returns {Function}
  *
  * @example
- * const add = (x)(y)(z) => x + y + z;
+ * const add = x => y => z => x + y + z;
  * const curriedAdd = uncurry(add);
  * curriedAdd(1, 2, 3); // 6
  */
-const uncurry = fn => (...args) => reduce(args, (ret, arg) => ret(arg), fn);
+const uncurry = fn => (...args) => reduce(args, (f, x) => f(x), fn);
 
 export default uncurry;
