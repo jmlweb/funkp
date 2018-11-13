@@ -9,6 +9,6 @@
  * const fn = constant(1);
  * fn(); // 1
  */
-const constant = arg => () => arg;
+const constant = x => () => x;
 
 export default constant;
